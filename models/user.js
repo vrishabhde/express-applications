@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
+const addproduct = new Schema({
+    name: String,
+    brand: String,
+    price: Number,
+    image: String
+})
+
 
 const newUser = new Schema({
     name: String,
@@ -8,7 +15,9 @@ const newUser = new Schema({
     email: String,
     password: String,
     otpfornumber: String,
-    otpforemail: String
+    otpforemail: String,
+    productList: [addproduct]
+
 })
 
 
